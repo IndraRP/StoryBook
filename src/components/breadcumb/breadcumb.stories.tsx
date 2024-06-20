@@ -3,6 +3,9 @@ import { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { BreadcrumbProps } from './breadcumb.types';
 
+
+
+
 // This tells Storybook how to list your stories and provide information
 export default {
     title: 'Atoms/Breadcrumb',
@@ -19,9 +22,20 @@ export default {
     // More on argTypes: https://storybook.js.org/docs/api/argtypes
 } as Meta;
 
+
+
+
+
+
+
 // With named export we define component's story
 export const Default: StoryObj<BreadcrumbProps> = (args: React.JSX.IntrinsicAttributes & BreadcrumbProps) => <Breadcrumb {...args} />;
 // Define default arguments for the Default StoryObj
+
+
+
+
+
 Default.args = {
     variant: 'medium',
     datas: [
@@ -40,6 +54,9 @@ Default.args = {
     ]
 };
 
+
+
+
 // Second StoryObj
 export const custom: StoryObj<BreadcrumbProps> = (args: React.JSX.IntrinsicAttributes & BreadcrumbProps) => (
     <Breadcrumb {...args}>
@@ -48,6 +65,9 @@ export const custom: StoryObj<BreadcrumbProps> = (args: React.JSX.IntrinsicAttri
         </div>
     </Breadcrumb>
 );
+
+
+
 // Define default arguments for the WithText component and inherit arguments from Default component
 custom.args = {
     ...Default.args,

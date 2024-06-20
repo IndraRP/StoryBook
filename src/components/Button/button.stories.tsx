@@ -8,6 +8,7 @@ const meta: Meta<typeof Button> = {
   parameters: {
     layout: "centered",
   },
+  
   tags: ["autodocs"],
   argTypes: {
     variant: {
@@ -16,6 +17,7 @@ const meta: Meta<typeof Button> = {
         options: ["primary", "success", "warning", "danger"],
       },
     },
+
     size: {
       control: {
         type: "radio",
@@ -24,6 +26,7 @@ const meta: Meta<typeof Button> = {
     },
     onClick: { action: "clicked" },
   },
+
   args: {
     variant: "primary",
     size: "medium",
@@ -34,6 +37,10 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 type Story = StoryObj<typeof Button>;
+
+
+
+
 
 export const Primary: Story = {
   args: {

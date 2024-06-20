@@ -3,6 +3,7 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
     variant: 'elevation' | 'outlined';
     classes?: string;
 }
+
 export const Card: FC<CardProps> = ({ variant = 'elevation', children, classes, ...rest }) => {
     return (
         <div

@@ -1,10 +1,12 @@
 import { AlertProps } from './allert.types';
 import { BsCheck, BsExclamationCircle, BsExclamationTriangle, BsQuestion } from "react-icons/bs";
-
 import { Button } from "../Button/button";
 
-export const Alert = ({ title, label, variant, classname }: AlertProps) => {
+
+export const Alert = ({ title, label, variant, classname, children}: AlertProps ) => {
   const icon = variant === "primary" ? <BsQuestion /> : variant === "success" ? <BsCheck /> : variant === "danger" ? <BsExclamationTriangle /> : variant === "warning" ? <BsExclamationCircle /> : ""
+
+
 
   return (
     <article
@@ -14,11 +16,18 @@ export const Alert = ({ title, label, variant, classname }: AlertProps) => {
         classname,
       ].join(" ")}
     >
+
+
+
       <section className="flex items-center space-x-2">
+
+{children && children}
+
         <div className="flex items-start space-x-2">
           <div className={["p-2 rounded-full", `storybook-alert-${variant}`].join(" ")}>
             {icon}
           </div>
+          
           <header>
             <h1 className="text-2xl font-semibold">{title}</h1>
             <p className="text-base font-medium">{label}</p>

@@ -1,4 +1,4 @@
-interface ModalProps {
+export interface ModalProps {
     variant: "Terang" | "Gelap";
     title: string;
     description?: string;
